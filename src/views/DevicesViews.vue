@@ -6,9 +6,6 @@ import { useRoute } from 'vue-router'
 const params = useRoute()
 const device = ref(null)
 
-
-
-
 getSubDocument('espacios', params.params.id, 'Devices', params.params.device, async (data) => {
     device.value = { id: data.id, ...data.data() }
 })
